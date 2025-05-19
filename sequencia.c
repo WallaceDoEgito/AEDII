@@ -29,7 +29,6 @@ int main(){
 
 int * EntradaSequencia(int * tamRef){
     int tam;
-    // printf("Qual o tamanho da sequencia? (Tamanho minimo é 2)\n");
     scanf("%i", &tam);
     if(tam < 2){
         printf("O tamanho da sequencia precisa ser de no minimo 2 digitos\n");
@@ -37,17 +36,12 @@ int * EntradaSequencia(int * tamRef){
     }
 
     int * ptr = malloc(sizeof(int) * tam);
-    // printf("Digite a sequencia de digitos onde falta um digito\n");
     for(int i = 0; i<tam; i++){
         scanf("%i,", &ptr[i]);
     }
     *tamRef = tam;
     return ptr;
 }
-
-// int * EntradaSequenciaFile(int *tamRef){
-//     FILE * 
-// }
 
 int ProcuraFaltante(int * arr, int ini, int fim){
     if(ini > fim) return 1 << 31;
