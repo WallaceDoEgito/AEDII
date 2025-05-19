@@ -8,10 +8,10 @@ Primeiro Copile o gerador de sequencia com um numero faltante caso vc nao tenha 
 gcc GeraArquivoNumeroSeq.c -o"Gera"
 ```
 
-Execute o arquivo copilado passando dois argumentos o tamanho da sequencia e o numero que a sequencia começará
+Execute o arquivo copilado passando um argumento, o tamanho da sequencia a ser gerada
 
 ```Bash
-./Gera 100 1
+./Gera 100
 ```
 
 após isso copile o sequencia.c
