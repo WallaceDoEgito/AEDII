@@ -5,7 +5,7 @@
 int main(int argc, char *argv[]) {
 
     long long tam = atoll(argv[1]);
-    int init = atoi(argv[2]);
+    int init = 1;
 
     srand(time(NULL));
     long long pos = rand() % tam;
