@@ -18,7 +18,7 @@ int main(){
     free(Sequencia);
 
     double tempoExecEmMs = (((double)(fim - inicio))/CLOCKS_PER_SEC) * 1000;
-    if(faltando == 1<<31)
+    if(faltando == -1)
     {
         printf("A sequencia inserida nao possui um numero omisso\n");
         exit(0);
@@ -44,17 +44,16 @@ int * EntradaSequencia(int * tamRef){
 }
 
 int ProcuraFaltante(int * arr, int ini, int fim){
-    if(ini > fim) return 1 << 31;
+    if(ini > fim) return -1;
     int meio = ini + (fim - ini)/2;
-    if(arr[meio] == arr[0] + meio)
+    if(arr[meio] == 1 + meio)
     {
         return ProcuraFaltante(arr, meio + 1, fim);
     }
     else
     {
-        if(arr[meio - 1] == arr[0] + (meio - 1)) return arr[0] + meio;
-        else return ProcuraFaltante(arr,  ini, meio);
-
+        if(arr[meio - 1] == 1 + (meio - 1)) return 1 + meio;
+        return ProcuraFaltante(arr,  ini, meio);
     }
 }
 
