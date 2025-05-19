@@ -52,7 +52,7 @@ int ProcuraFaltante(int * arr, int ini, int fim){
     }
     else
     {
-        if(arr[meio - 1] == 1 + (meio - 1)) return 1 + meio;
+        if(meio == 0 || arr[meio - 1] == 1 + (meio - 1)) return 1 + meio;
         return ProcuraFaltante(arr,  ini, meio);
     }
 }
