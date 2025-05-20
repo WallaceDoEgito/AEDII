@@ -4,24 +4,24 @@
 
 int main(int argc, char *argv[]) {
 
-    long long tam = atoll(argv[1]);
+    int tam = atoi(argv[1]);
     int init = 1;
 
     srand(time(NULL));
-    long long pos = rand() % tam;
+    int pos = rand() % tam;
     if (pos == 0) pos++;
 
     FILE *file = fopen("sequencia.txt", "wb");
 
-    fprintf(file, "%lld\n", tam);
+    fprintf(file, "%d\n", tam);
 
-    for (long long i = 0; i < tam; i++) {
+    for (int i = 0; i <= tam; i++) {
         if (i == pos) continue;
 
-        fprintf(file, "%lld\n", (long long)init + i);
+        fprintf(file, "%d\n", init + i);
     }
 
     fclose(file);
-    printf("O arquivo de %lli de tamanho foi criado\n", tam);
+    printf("O arquivo de %i de tamanho foi criado\n", tam);
     return 0;
 }
