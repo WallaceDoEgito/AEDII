@@ -30,8 +30,8 @@ int main(){
 int * EntradaSequencia(int * tamRef){
     int tam;
     scanf("%i", &tam);
-    if(tam < 2){
-        printf("O tamanho da sequencia precisa ser de no minimo 2 digitos\n");
+    if(tam < 1){
+        printf("O tamanho da sequencia precisa ser de no minimo 1 digito\n");
         exit(1);
     }
 
